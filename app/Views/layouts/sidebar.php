@@ -44,10 +44,19 @@
             </a>
           </li>
           <li class="nav-item">
-          <a href="./spt.html" class="nav-link">
+          <a href="<?php echo base_url('spt') ?>" class="nav-link">
               <i class="nav-icon fas fa-th"></i>
               <p>
                 SPT
+                <span class="right badge badge-danger">New</span>
+              </p>
+            </a>
+          </li>
+          <li class="nav-item">
+          <a href="<?php echo base_url('dashboard') ?>" class="nav-link">
+              <i class="nav-icon fas fa-th"></i>
+              <p>
+                Dashboard
                 <span class="right badge badge-danger">New</span>
               </p>
             </a>
