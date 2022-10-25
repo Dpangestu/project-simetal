@@ -6,6 +6,11 @@ class Home extends BaseController
 {
     public function index()
     {
-        return view('welcome_message');
+        return view('layouts/app');
+    }
+    public function about()
+    {
+        echo 'ini halaman about';
     }
 }
+
