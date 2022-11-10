@@ -37,6 +37,15 @@ $routes->set404Override();
 // route since we don't have to scan directories.
 $routes->get('/', 'Home::index');
 $routes->get('/spt', 'Spt::index');
+$routes->get('/kabid', 'Kabid::index');
+$routes->get('/kadis', 'Kadis::index');
+$routes->get('/penera', 'Penera::index');
+$routes->get('/sekdis', 'Sekdis::index');
+$routes->get('/subkoordinator', 'Subkoordinator::index');
+$routes->get('/penerbitan_spt', 'Penerbitan_spt::index');
+$routes->get('/app', 'App::index');
+$routes->get('/login', 'login::index');
+
 
 
 /*

@@ -68,5 +68,10 @@ class Filters extends BaseConfig
      *
      * @var array
      */
-    public $filters = [];
+    public $filters = [
+        'csrf'     => \CodeIgniter\Filters\CSRF::class,
+		'toolbar'  => \CodeIgniter\Filters\DebugToolbar::class,
+		'honeypot' => \CodeIgniter\Filters\Honeypot::class,
+		'authGuard' => \App\Filters\AuthGuard::class,
+    ];
 }

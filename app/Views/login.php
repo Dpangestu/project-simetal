@@ -8,9 +8,9 @@
 
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
 
-    <link rel="stylesheet" href="../../plugins/fontawesome-free/css/all.min.css">
+    <link rel="stylesheet" href="<?php base_url()?>/template/plugins/fontawesome-free/css/all.min.css">
 
-    <link rel="stylesheet" href="../../plugins/icheck-bootstrap/icheck-bootstrap.min.css">
+    <link rel="stylesheet" href="<?php base_url()?>/template/plugins/icheck-bootstrap/icheck-bootstrap.min.css">
 
     <link rel="stylesheet" href="../../dist/css/adminlte.min.css?v=3.2.0">
     <script nonce="07acc5a0-139c-4b93-b9a9-ba86b73ee3f5">
@@ -80,9 +80,15 @@
             </div>
             <div class="card-body">
                 <p class="login-box-msg">Sign in to start your session</p>
-                <form action="../../index3.html" method="post">
+
+                <?php if(session()->getFlashdata('msg')):?>
+                    <div class="alert alert-warning">
+                       <?= session()->getFlashdata('msg') ?>
+                    </div>
+                <?php endif;?>
+                <form action="<?php echo base_url(); ?>/login/loginAuth" method="post">
                     <div class="input-group mb-3">
-                        <input type="email" class="form-control" placeholder="Email">
+                        <input type="text" name="username" class="form-control" placeholder="Username">
                         <div class="input-group-append">
                             <div class="input-group-text">
                                 <span class="fas fa-envelope"></span>
@@ -90,7 +96,7 @@
                         </div>
                     </div>
                     <div class="input-group mb-3">
-                        <input type="password" class="form-control" placeholder="Password">
+                        <input type="password" name="password" class="form-control" placeholder="Password">
                         <div class="input-group-append">
                             <div class="input-group-text">
                                 <span class="fas fa-lock"></span>
@@ -135,9 +141,9 @@
     </div>
 
 
-    <script src="../../plugins/jquery/jquery.min.js"></script>
+    <script src="<?php base_url()?>/template/plugins/jquery/jquery.min.js"></script>
 
-    <script src="../../plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="<?php base_url()?>/template/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
 
     <script src="../../dist/js/adminlte.min.js?v=3.2.0"></script>
 </body>

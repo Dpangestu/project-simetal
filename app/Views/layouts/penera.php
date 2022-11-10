@@ -3,6 +3,7 @@
 <body>
     <div class="container-fluid">
     <div class="card">
+
     <!-- Content Header (Page header) -->
     <section class="content-header">
       <div class="container-fluid">
@@ -28,12 +29,8 @@
             <div class="card">
               <div class="card-header">
                 <div class="col card-header text-right">
-                <h3 class="card-title">LIST SURAT PERINTAH TUGAS PELAYANAN TERA/TERA ULANG</h3>
+                <h3 class="card-title">LIST SURAT PERINTAH TUGAS PELAYANAN TERA/TERA ULANG </h3>
               </div>
-               <div class="float-right">
-								<a href="<?php echo base_url('penerbitan_spt') ?>" class="btn btn-sm btn-primary"><i class="fa fa-plus"></i> Tambah SPT Baru</a>
-							</div> 
-            </div>
             </div>
               <!-- /.card-header -->
               <div class="card-body">
@@ -57,7 +54,6 @@
                         <td>sds</td>
                         <td>
                             <button type="button" class="btn btn-primary">REVIEW</button>
-                            <button type="button" class="btn btn-danger">EDIT</button>
                             <button type="button" class="btn btn-warning">DOWNLOAD</button>                   
                         </td> 
                         
