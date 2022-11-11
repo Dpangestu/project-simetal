@@ -35,16 +35,22 @@ $routes->set404Override();
 
 // We get a performance increase by specifying the default
 // route since we don't have to scan directories.
-$routes->get('/', 'Home::index');
-$routes->get('/spt', 'Spt::index');
-$routes->get('/kabid', 'Kabid::index');
-$routes->get('/kadis', 'Kadis::index');
-$routes->get('/penera', 'Penera::index');
-$routes->get('/sekdis', 'Sekdis::index');
-$routes->get('/subkoordinator', 'Subkoordinator::index');
-$routes->get('/penerbitan_spt', 'Penerbitan_spt::index');
-$routes->get('/app', 'App::index');
-$routes->get('/login', 'login::index');
+$routes->get('/', 'User::index');
+$routes->get('/User', 'User::index');
+// $routes->get('/spt', 'Spt::index');
+// $routes->get('/kabid', 'Kabid::index');
+// $routes->get('/kadis', 'Kadis::index');
+// $routes->get('/penera', 'Penera::index');
+// $routes->get('/sekdis', 'Sekdis::index');
+// $routes->get('/subkoordinator', 'Subkoordinator::index');
+// $routes->get('/penerbitan_spt', 'Penerbitan_spt::index');
+// $routes->get('/user', 'User::index');
+// $routes->get('admin/users', 'UserController::index', ['filter' => 'permission:manage-user']);
+// $routes->get('admin/users', 'UserController::index', ['filter' => 'role:admin,superadmin']);
+
+// login & register
+$routes->get('/login', 'Home::login');
+$routes->get('/register', 'Home::registration');
 
 
 
