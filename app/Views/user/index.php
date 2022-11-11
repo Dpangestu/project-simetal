@@ -1,5 +1,5 @@
-<?= $this->include('layouts/header') ?>
-<?= $this->include('layouts/sidebar') ?>
+<?= $this->extend('layouts/tamplate'); ?>
+<?= $this->section('content'); ?>
 <section class="content">
   <div class="container-fluid">
     <div class="card">
@@ -45,4 +45,4 @@
     </div>
 </section>
 
-<?= $this->include('layouts/footer') ?>
+<?= $this->endSection(); ?>

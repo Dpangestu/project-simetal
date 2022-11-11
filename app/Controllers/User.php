@@ -2,11 +2,11 @@
 
 namespace App\Controllers;
 
-class App extends BaseController
+class User extends BaseController
 {
     public function index()
     {
-        return view('layouts/app');
+        return view('user/index');
     }
     public function about()
     {
