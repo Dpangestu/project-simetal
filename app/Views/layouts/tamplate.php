@@ -21,7 +21,7 @@
   <!-- JQVMap -->
   <link rel="stylesheet" href="<?= base_url() ?>/plugins/jqvmap/jqvmap.min.css">
   <!-- Theme style -->
-  <link rel="stylesheet" href="dist/css/adminlte.min.css">
+  <link rel="stylesheet" href="<?= base_url() ?>/dist/css/adminlte.min.css">
   <!-- overlayScrollbars -->
   <link rel="stylesheet" href="<?= base_url() ?>/plugins/overlayScrollbars/css/OverlayScrollbars.min.css">
   <!-- Daterange picker -->
@@ -34,20 +34,29 @@
   <div class="wrapper">
 
     <!-- Preloader -->
-    <!-- <div class="preloader flex-column justify-content-center align-items-center">
-      <img class="animation__shake" src="dist/img/AdminLTELogo.png" alt="AdminLTELogo" height="60" width="60">
-    </div> -->
+    <div class="preloader flex-column justify-content-center align-items-center">
+      <img class="animation__shake" src="<?= base_url() ?>/dist/img/DinasKota.png" alt="DinasKotaLogo" width="150">
+    </div>
     <!-- /.navbar -->
     <?= $this->include('layouts/topbar'); ?>
     <?= $this->include('layouts/sidebar'); ?>
-    <?= $this->renderSection('content'); ?> 
+    <div class="content-wrapper">
+      <!-- Content Header (Page header) -->
+    <?= $this->renderSection('content'); ?>
+    </div> 
     <?= $this->include('layouts/footer'); ?> 
 
 
+
+    <aside class="control-sidebar control-sidebar-dark">
+
+    </aside>
+
+    </div>
       <!-- jQuery -->
-      <script src="plugins/jquery/jquery.min.js"></script>
+      <script src="<?= base_url() ?>/plugins/jquery/jquery.min.js"></script>
       <!-- jQuery UI 1.11.4 -->
-      <script src="plugins/jquery-ui/jquery-ui.min.js"></script>
+      <script src="<?= base_url() ?>/plugins/jquery-ui/jquery-ui.min.js"></script>
       <!-- Resolve conflict in jQuery UI tooltip with Bootstrap tooltip -->
       <script>
         $.widget.bridge('uibutton', $.ui.button)
@@ -73,11 +82,11 @@
       <!-- overlayScrollbars -->
       <script src="<?= base_url() ?>/plugins/overlayScrollbars/js/jquery.overlayScrollbars.min.js"></script>
       <!-- AdminLTE App -->
-      <script src="dist/js/adminlte.js"></script>
+      <script src="<?= base_url() ?>/dist/js/adminlte.js"></script>
       <!-- AdminLTE for demo purposes -->
-      <script src="dist/js/demo.js"></script>
+      <!-- <script src="dist/js/demo.js"></script> -->
       <!-- AdminLTE dashboard demo (This is only for demo purposes) -->
-      <script src="dist/js/pages/dashboard.js"></script>
+      <script src="<?= base_url() ?>/dist/js/pages/dashboard.js"></script>
 </body>
 
 </html>

@@ -6,11 +6,14 @@ class Spt extends BaseController
 {
     public function index()
     {
-        return view('layouts/spt');
+        if (in_groups('admin')) {
+            echo view('pages/spt/admin');
+        } else {
+            echo "404";
+        }
     }
-    public function about()
-    {
-        echo 'ini halaman about';
+    public function create(){
+        return view('pages/spt/add-spt');
     }
 }
 
