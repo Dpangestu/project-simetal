@@ -35,9 +35,12 @@ $routes->set404Override();
 
 // We get a performance increase by specifying the default
 // route since we don't have to scan directories.
-$routes->get('/', 'User::index');
-$routes->get('/User', 'User::index');
-// $routes->get('/spt', 'Spt::index');
+$routes->get('/', 'Home::index');
+$routes->get('/dashboard', 'Admin::index');
+$routes->get('/user', 'User::index');
+// spt
+$routes->get('/spt', 'Spt::index');
+$routes->get('/spt/add', 'Spt::create');
 // $routes->get('/kabid', 'Kabid::index');
 // $routes->get('/kadis', 'Kadis::index');
 // $routes->get('/penera', 'Penera::index');
