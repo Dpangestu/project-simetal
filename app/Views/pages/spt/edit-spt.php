@@ -5,7 +5,7 @@
     <div class="container-fluid">
         <div class="row">
             <div class="col-sm">
-                <h1>Form Pembuatan Surat Perintah Tugas Pelayanan Tera/Tera Ulang</h1>
+                <h1>Edit Surat Perintah Tugas Pelayanan Tera/Tera Ulang</h1>
             </div>
         </div>
     </div>
@@ -22,7 +22,7 @@
             </div>
             <!-- /.card-header -->
             <div class="card-body table-responsive p-0">
-            <form action="<?= site_url('/spt/store') ?>" method="post" id="add-spt" name="add-spt">
+            <form action="<?= site_url('spt/update/'.$spts['id']) ?>" method="post" id="edit-spt" name="edit-spt">
                 <div class="card-body">
 
                     <div class="form-group">
@@ -31,7 +31,7 @@
                                 class="form-control" 
                                 id="owner"
                                 name="owner"
-                                placeholder="Nama Pemohon/Perusahaan">
+                                value="<?= $spts['owner']?>">
                     </div>
 
                     <div class="form-group">
@@ -40,7 +40,7 @@
                                 class="form-control" 
                                 id="applicant_date"
                                 name="applicant_date"
-                                placeholder="Tanggal Pelaksanaan">
+                                value="<?= $spts['applicant_date']?>">
                     </div>
 
                     <div class="form-group">
@@ -49,7 +49,7 @@
                                 class="form-control" 
                                 id="address"
                                 name="address"
-                                placeholder="Alamat Pelaksanaan">
+                                value="<?= $spts['address']?>">
                     </div>
                     
                     <div class="form-group">
@@ -57,7 +57,7 @@
                     <label for="officer">Petugas</label>
                     <div class="row">
                         <div class="col">
-                            <input type="text" class="form-control" name="officer" placeholder="Petugas" aria-label="First name">
+                            <input type="text" class="form-control" name="officer" value="<?= $spts['officer']?>">
                         </div>
                         <div class="col">
                             <input type="text" class="form-control" placeholder="NIP" aria-label="Last name">

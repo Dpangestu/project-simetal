@@ -21,15 +21,23 @@
 
   <!-- Sidebar Menu -->
   <nav class="mt-2">
-    <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
+    <ul class="nav nav-pills nav-sidebar sidebar-dark flex-column data-accordion" id="accordionSidebar" data-widget="treeview" role="menu">
       <!-- Add icons to the links using the .nav-icon class
                with font-awesome or any other icon font library -->
       <?php if (in_groups('admin')): ?>
       <li class="nav-item">
-        <a href="<?php echo base_url('dashboard') ?>" class="nav-link active">
+        <a href="<?php echo base_url('dashboard') ?>" class="nav-link nav-item">
           <i class="nav-icon fas fa-tachometer-alt"></i>
           <p>
             Dashboard
+          </p>
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="<?php echo base_url('tera') ?>" class="nav-link" >
+          <i class="nav-icon fas fa-industry"></i>
+          <p>
+            Tera/Tera Ulang
           </p>
         </a>
       </li>
@@ -48,7 +56,19 @@
         </a>
       </li>
       <?php endif; ?>
-
+       
+      <!-- akun kadis -->
+      <?php if (in_groups('kadis')): ?>
+      <li class="nav-item">
+        <a href="<?php echo base_url('kadis') ?>" class="nav-link">
+          <i class="nav-icon fas fa-th"></i>
+          <p>
+            Surat Pelayanan Tera
+          </p>
+        </a>
+      </li>
+      <?php endif; ?>
+      
       <!-- akun sub koordinator  -->
       <?php if (in_groups('subkoor')): ?>
       <li class="nav-item">

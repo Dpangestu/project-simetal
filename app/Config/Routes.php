@@ -1,6 +1,7 @@
 <?php
 
 namespace Config;
+use App\Controllers\Tera;
 
 // Create a new instance of our RouteCollection class.
 $routes = Services::routes();
@@ -38,9 +39,16 @@ $routes->set404Override();
 $routes->get('/', 'Home::index');
 $routes->get('/dashboard', 'Admin::index');
 $routes->get('/user', 'User::index');
+// tera
+$routes->get('/tera', 'Tera::index');
+$routes->get('/tera/add', 'Tera::create');
 // spt
 $routes->get('/spt', 'Spt::index');
 $routes->get('/spt/add', 'Spt::create');
+$routes->post('/spt/store', 'Spt::store');
+$routes->get('/spt/edit-spt/(:num)', 'Spt::edit/$1');
+$routes->post('/spt/update/(:num)', 'Spt::update/$1');
+// $routes->get('/spt/edit', 'Spt::update');
 // $routes->get('/kabid', 'Kabid::index');
 // $routes->get('/kadis', 'Kadis::index');
 // $routes->get('/penera', 'Penera::index');
@@ -52,8 +60,8 @@ $routes->get('/spt/add', 'Spt::create');
 // $routes->get('admin/users', 'UserController::index', ['filter' => 'role:admin,superadmin']);
 
 // login & register
-$routes->get('/login', 'Home::login');
-$routes->get('/register', 'Home::registration');
+// $routes->get('/login', 'Home::login');
+// $routes->get('/register', 'Home::registration');
 
 
 
