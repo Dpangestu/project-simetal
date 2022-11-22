@@ -41,6 +41,8 @@ $routes->get('/user', 'User::index');
 // spt
 $routes->get('/spt', 'Spt::index');
 $routes->get('/spt/add', 'Spt::create');
+//skhp
+$routes->get('/skhp', 'Skhp::index');
 // $routes->get('/kabid', 'Kabid::index');
 // $routes->get('/kadis', 'Kadis::index');
 // $routes->get('/penera', 'Penera::index');
