@@ -6,7 +6,7 @@ class Home extends BaseController
 {
     public function index()
     {
-        echo 'landing page';
+        return view('index');
     }
     public function login()
     {

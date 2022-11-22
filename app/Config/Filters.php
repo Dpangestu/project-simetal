@@ -37,7 +37,7 @@ class Filters extends BaseConfig
     public $globals = [
         'before' => [
             'honeypot',
-            'login'
+            'login',
             // 'csrf',
             // 'invalidchars',
         ],
@@ -73,9 +73,7 @@ class Filters extends BaseConfig
      * @var array
      */
     public $filters = [
-        'csrf'     => \CodeIgniter\Filters\CSRF::class,
-		'toolbar'  => \CodeIgniter\Filters\DebugToolbar::class,
-		'honeypot' => \CodeIgniter\Filters\Honeypot::class,
-		'authGuard' => \App\Filters\AuthGuard::class,
+        // 'login' => ['before' => 'Admin','User', 'Spt', 'User', 'Tera'],
+		// 'authGuard' => \App\Filters\AuthGuard::class,
     ];
 }
