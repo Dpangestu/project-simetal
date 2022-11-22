@@ -4,7 +4,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Simetal Kocir</title>
+  <title>Simetal Kocir | <?= $title;?></title>
 
   <!-- Google Font: Source Sans Pro -->
   <link rel="stylesheet"
@@ -34,9 +34,9 @@
   <div class="wrapper">
 
     <!-- Preloader -->
-    <div class="preloader flex-column justify-content-center align-items-center">
-      <img class="animation__shake" src="<?= base_url() ?>/dist/img/DinasKota.png" alt="DinasKotaLogo" width="150">
-    </div>
+    <!-- <div class="preloader flex-column justify-content-center align-items-center">
+      <img class="animation__shake" src="/dist/img/DinasKota.png" alt="DinasKotaLogo" width="150">
+    </div> -->
     <!-- /.navbar -->
     <?= $this->include('layouts/topbar'); ?>
     <?= $this->include('layouts/sidebar'); ?>

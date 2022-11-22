@@ -54,6 +54,7 @@
             <div class="card-body table-responsive p-0">
                 <table class="table table-hover table-striped table-bordered text-nowrap">
                     <thead>
+                    
                         <tr class="bg-orange">
                             <th style="width: 50px;">No</th>
                             <th style="width: 150px;">Pemohon</th>
@@ -65,21 +66,24 @@
                         </tr>
                     </thead>
                     <tbody>
+                        <?php $i = 1 ;?>
+                        <?php foreach($spts as $spt): ?>
                         <tr>
-                            <td class="text-right">1</td>
-                            <td>Nama Pemohon</td>
-                            <td>Alamat Pelaksanaan</td>
-                            <td>Tanggal Pelaksanaan</td>
-                            <td>Nama Petugas</td>
+                            <td class="text-center"><?= $i++ ;?></td>
+                            <td><?= $spt['owner']?></td>
+                            <td><?= $spt['address']?></td>
+                            <td><?= $spt['applicant_date']?></td>
+                            <td><?= $spt['officer']?></td>
                             <td class="text-center">
-                                Status
+                            <?= $spt['status']?>
                             </td>
                             <td>
-                                <a class="btn btn-dark btn-sm mx-1" href="#"><i class="fas fa-search"></i></a>                                
-                                <a class="btn btn-warning btn-sm mx-1" href="#"><i class="fas fa-pencil-alt"></i></a>
-                                <button type="button" class="btn btn-danger btn-sm mx-1" (click)="open(content,item.id,item.name)"><i class="fas fa-trash-alt"></i></button>
+                                <button type="button" class="btn btn-dark btn-sm mx-1" href="#"><i class="fas fa-search"></i></button>
+                                <a class="btn btn-warning btn-sm mx-1" href="<?php echo base_url('spt/edit-spt/'.$spt['id']);?>"><i class="fas fa-pencil-alt"></i></a>
+                                <button type="button" class="btn btn-primary btn-sm mx-1" href="#"><i class="fas fa-download"></i></button>
                             </td>
                         </tr>
+                        <?php endforeach; ?>
                     </tbody>
                 </table>
             </div>
