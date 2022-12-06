@@ -16,5 +16,13 @@ class Home extends BaseController
     {
         return view('auth/register');
     }
-}
 
+    public function loginUser()
+    {
+        return view('auth/login_user');
+    }
+    public function FormLoginUser()
+    {
+        return view('Admin/dashboard_user');
+    }
+}
